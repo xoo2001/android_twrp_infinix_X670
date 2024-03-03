@@ -150,8 +150,6 @@ TARGET_USES_MKE2FS := true # Use mke2fs to create ext4 images
 TW_DEVICE_VERSION := xoo2001
 
 # Set brightness path and level
-TW_FRAMERATE := 120
-TW_MAX_BRIGHTNESS := 1200
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 
 # Include some binaries

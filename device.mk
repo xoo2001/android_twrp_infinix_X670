@@ -16,6 +16,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 BOARD_VNDK_VERSION := current
 PRODUCT_TARGET_VNDK_VERSION := 31
 
+# Platform
+PRODUCT_PLATFORM := MT6781
+
+# A/B
+ENABLE_VIRTUAL_AB := true
+
 # fastboot/d hal
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
@@ -55,6 +61,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=$(BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE) \
     POSTINSTALL_OPTIONAL_system=true
 
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
@@ -92,4 +99,3 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-    
