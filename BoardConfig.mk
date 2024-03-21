@@ -155,14 +155,12 @@ TW_DEVICE_VERSION := xoo2001
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 
 # Include some binaries
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_REPACKTOOLS := true
-TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_BASH := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 BOARD_HAS_NO_SELECT_BUTTON := true
-TW_EXCLUDE_TWRPAPP := true
+TW_NO_EXFAT := true
+TW_NO_USB_STORAGE := true
+BOARD_HAS_NO_REAL_SDCARD := true
 
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true
@@ -172,7 +170,3 @@ TW_USE_FSCRYPT_POLICY := 2
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-
-# Debug
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
